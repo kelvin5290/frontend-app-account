@@ -26,10 +26,10 @@ const JumpNav = ({
           'basic-information',
           'profile-information',
           'demographics-information',
-          'social-media',
+          
           'site-preferences',
-          'linked-accounts',
-          'delete-account',
+          
+          
         ]}
         className="list-unstyled"
         currentClassName="font-weight-bold"
