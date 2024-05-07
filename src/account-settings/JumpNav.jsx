@@ -39,11 +39,11 @@ const JumpNav = ({
             {intl.formatMessage(messages['account.settings.section.account.information'])}
           </NavHashLink>
         </li>
-        <li>
+        {/* <li>
           <NavHashLink to="#profile-information">
             {intl.formatMessage(messages['account.settings.section.profile.information'])}
           </NavHashLink>
-        </li>
+        </li> */}
         {getConfig().ENABLE_DEMOGRAPHICS_COLLECTION && displayDemographicsLink
           && (
           <li>
@@ -52,29 +52,29 @@ const JumpNav = ({
             </NavHashLink>
           </li>
           )}
-        <li>
+        {/* <li>
           <NavHashLink to="#social-media">
             {intl.formatMessage(messages['account.settings.section.social.media'])}
           </NavHashLink>
-        </li>
+        </li> */}
         <li>
           <NavHashLink to="#site-preferences">
             {intl.formatMessage(messages['account.settings.section.site.preferences'])}
           </NavHashLink>
         </li>
-        <li>
+        {/* <li>
           <NavHashLink to="#linked-accounts">
             {intl.formatMessage(messages['account.settings.section.linked.accounts'])}
           </NavHashLink>
-        </li>
-        {getConfig().ENABLE_ACCOUNT_DELETION
+        </li> */}
+        {/* {getConfig().ENABLE_ACCOUNT_DELETION
           && (
           <li>
             <NavHashLink to="#delete-account">
               {intl.formatMessage(messages['account.settings.jump.nav.delete.account'])}
             </NavHashLink>
           </li>
-          )}
+          )} */}
       </Scrollspy>
       {showPreferences && (
         <>
