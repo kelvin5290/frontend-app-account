@@ -102,10 +102,10 @@ export function* handleSaveSettings(action) {
     } else {
       savedValues = yield call(patchSettings, username, commitData, userId);
     }
-    // yield put(saveSettingsSuccess(savedValues, commitData));
-    // if (savedValues.country) { yield put(fetchTimeZones(savedValues.country)); }
-    // yield delay(1000);
-    // yield put(closeForm(action.payload.formId));
+    yield put(saveSettingsSuccess(savedValues, commitData));
+    if (savedValues.country) { yield put(fetchTimeZones(savedValues.country)); }
+    yield delay(1000);
+    yield put(closeForm(action.payload.formId));
   } catch (e) {
     if (e.fieldErrors) {
       if (e.fieldErrors.name?.includes('verification')) {

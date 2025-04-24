@@ -538,7 +538,7 @@ class AccountSettingsPage extends React.Component {
           <p>{this.props.intl.formatMessage(messages['account.settings.section.account.information.description'])}</p>
           {this.renderManagedProfileMessage()}
 
-          {this.renderNameChangeModal()}
+          {/* {this.renderNameChangeModal()} */}
 
           <EditableField
             name="username"
@@ -573,9 +573,7 @@ class AccountSettingsPage extends React.Component {
                 : this.props.intl.formatMessage(messages['account.settings.field.full.name.help.text'])
             }
             isEditable={
-              verifiedName
-                ? this.isEditable('verifiedName') && this.isEditable('name')
-                : this.isEditable('name')
+              false
             }
             isGrayedOut={
               verifiedName && !this.isEditable('verifiedName')
@@ -600,8 +598,8 @@ class AccountSettingsPage extends React.Component {
                 )
               }
               helpText={this.renderVerifiedNameHelpText(verifiedName.status, verifiedName.proctored_exam_attempt_id)}
-              isEditable={this.isEditable('verifiedName')}
-              isGrayedOut={!this.isEditable('verifiedName')}
+              isEditable={false}
+              isGrayedOut={true}
               onChange={this.handleEditableFieldChange}
               onSubmit={this.handleSubmitVerifiedName}
             />
@@ -611,7 +609,7 @@ class AccountSettingsPage extends React.Component {
             name="email"
             label={this.props.intl.formatMessage(messages['account.settings.field.email'])}
             emptyLabel={
-              this.isEditable('email')
+              false
                 ? this.props.intl.formatMessage(messages['account.settings.field.email.empty'])
                 : this.renderEmptyStaticFieldMessage()
             }
@@ -621,11 +619,11 @@ class AccountSettingsPage extends React.Component {
               messages['account.settings.field.email.help.text'],
               { siteName: getConfig().SITE_NAME },
             )}
-            isEditable={this.isEditable('email')}
+            isEditable={false}
             {...editableFieldProps}
           />
           {this.renderSecondaryEmailField(editableFieldProps)}
-          <ResetPassword email={this.props.formValues.email} />
+          {hasLinkedTPA?<></>:<ResetPassword email={this.props.formValues.email} />}
           {/* {(!getConfig().ENABLE_COPPA_COMPLIANCE)
             && (
             <EditableSelectField

@@ -11,9 +11,19 @@ const siteLanguageList = [
   },
  {
     code: 'zh-hk',
-    name: '中文',
+    name: '中文 (繁體)',
     released: true,
-  }
+  },
+  {
+    code: 'th',
+    name: 'ไทย',
+    released: true,
+  },
+  {
+    code: 'ms-my',
+    name: 'Melayu',
+    released: true,
+  },
 ];
 
 export default siteLanguageList;

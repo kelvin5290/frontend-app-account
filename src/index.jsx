@@ -34,7 +34,7 @@ subscribe(APP_READY, () => {
             <main className="flex-grow-1" id="main">
               <Outlet />
             </main>
-            <Footer />
+            {/* <Footer /> */}
           </div>
         )}
         >

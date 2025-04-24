@@ -1,0 +1,14 @@
+version: "3"
+services:
+  header:
+    image: "docker.io/node:18.19.0-bullseye-slim"
+    # ports:
+    #     - "5000:5000"
+    stdin_open: true
+    tty: true
+    volumes:
+        - ./:/app
+    restart: unless-stopped
+    command: sleep 3600
+    environment:
+        - "PORT=5000"
