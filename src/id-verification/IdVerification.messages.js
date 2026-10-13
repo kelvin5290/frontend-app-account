@@ -613,7 +613,7 @@ const messages = defineMessages({
   },
   'id.verification.return.dashboard': {
     id: 'id.verification.return.dashboard',
-    defaultMessage: 'Return to Your Dashboard',
+    defaultMessage: 'Return to Your Course Library',
     description: 'Button to return to the dashboard.',
   },
   'id.verification.return.course': {
